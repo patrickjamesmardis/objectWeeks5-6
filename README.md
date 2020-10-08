@@ -45,10 +45,10 @@ void loop () {
 
 }
 ```
-![sketch 1 gif](/documentationAssets/sketch1.gif)
+![sketch1 gif](/documentationAssets/sketch1.gif)
 
 ## [Sketch 2](/sketch2/sketch2.ino): Servo + Photocell
-![sketch 1 breadboard](/documentationAssets/sketch2_bb.png)
+![sketch2 breadboard](/documentationAssets/sketch2_bb.png)
 
 The second sketch of this assignment explores a servo controlled by a photocell. The photocell allows current to flow from the 5V pin to ground through a 10K resistor. The side going to ground is also connected to pin A0, so the Arduino program can use analogRead(0) to receive the light intensity. The servo also receives current from 5V and flows to ground, with pin 9 controlling its pulse pin.
 
@@ -66,4 +66,4 @@ Using the servo’s write function, the program can change the position of its a
 float pos = map(analogRead(0), 0, 1023, 0, 180);
 myservo.write(pos);
 ```
-![sketch 1 gif](/documentationAssets/sketch2.gif)
+![sketch2 gif](/documentationAssets/sketch2.gif)

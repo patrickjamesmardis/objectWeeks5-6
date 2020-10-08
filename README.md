@@ -1,7 +1,7 @@
 # Weeks 5 + 6 | Motors, Servos, and Transistors
 **[process.patrickjam.es/](https://process.patrickjam.es/2020/10/08/weeks-5-6-motors-servos-and-transistors/)**
 ## [Sketch 1](/sketch1/sketch1.ino): DC Motor + Push Button
-![sketch 1 breadboard](/documentationAssets/sketch1_bb.png)
+![sketch1 breadboard](/documentationAssets/sketch1_bb.png)
 
 The first sketch of this assignment explores a DC motor controlled by a push button. The circuit uses a transistor with its base pin connected to pin 9. The DC motor allows the current to flow from the Ardunio’s Vin pin to the transistor’s collector pin. The transistor uses pin 9’s output to control the flow to ground (emitter pin). With this circuit in place, the board can control the motor using analogWrite(9, ###). For example, the following will turn the motor on for one second, then off for another second.
 
@@ -45,7 +45,6 @@ void loop () {
 
 }
 ```
-![sketch1 gif](/documentationAssets/sketch1.gif)
 
 ## [Sketch 2](/sketch2/sketch2.ino): Servo + Photocell
 ![sketch2 breadboard](/documentationAssets/sketch2_bb.png)
@@ -66,4 +65,3 @@ Using the servo’s write function, the program can change the position of its a
 float pos = map(analogRead(0), 0, 1023, 0, 180);
 myservo.write(pos);
 ```
-![sketch2 gif](/documentationAssets/sketch2.gif)

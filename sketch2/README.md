@@ -2,12 +2,6 @@
 
 **[process.patrickjam.es/](https://process.patrickjam.es/2020/10/08/weeks-5-6-motors-servos-and-transistors/)**
 
-![sketch2 breadboard](../documentationAssets/sketch2_bb.png)
-
-![sketch2 gif](../documentationAssets/sketch2.gif)
-
-![sketch2 schematic](../documentationAssets/sketch2_schem.png)
-
 ```c++
 #include <Servo.h>
 Servo myservo;
@@ -21,3 +15,7 @@ void loop() {
   myservo.write(pos);
 }
 ```
+
+![sketch2 breadboard](../documentationAssets/sketch2_bb.png)
+![sketch2 gif](../documentationAssets/sketch2.gif)
+![sketch2 schematic](../documentationAssets/sketch2_schem.png)

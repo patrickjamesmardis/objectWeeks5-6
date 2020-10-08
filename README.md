@@ -1,9 +1,7 @@
 # Weeks 5 + 6 | Motors, Servos, and Transistors
 **[process.patrickjam.es/](https://process.patrickjam.es/2020/10/08/weeks-5-6-motors-servos-and-transistors/)**
-## [Sketch 1](/sketch1)
+## [Sketch 1](/sketch1): DC Motor + Push Button
 ![sketch 1 breadboard](/documentationAssets/sketch1_bb.png)
-![sketch 1 gif](/documentationAssets/sketch1.gif)
-![sketch 1 schematic](/documentationAssets/sketch1_schem.png)
 
 The first sketch of this assignment explores a DC motor controlled by a push button. The circuit uses a transistor with its base pin connected to pin 9. The DC motor allows the current to flow from the Ardunio’s Vin pin to the transistor’s collector pin. The transistor uses pin 9’s output to control the flow to ground (emitter pin). With this circuit in place, the board can control the motor using analogWrite(9, ###). For example, the following will turn the motor on for one second, then off for another second.
 
@@ -47,11 +45,10 @@ void loop () {
 
 }
 ```
+![sketch 1 gif](/documentationAssets/sketch1.gif)
 
-## [Sketch 2](/sketch2)
+## [Sketch 2](/sketch2): Servo + Photocell
 ![sketch 1 breadboard](/documentationAssets/sketch2_bb.png)
-![sketch 1 gif](/documentationAssets/sketch2.gif)
-![sketch 1 schematic](/documentationAssets/sketch2_schem.png)
 
 The second sketch of this assignment explores a servo controlled by a photocell. The photocell allows current to flow from the 5V pin to ground through a 10K resistor. The side going to ground is also connected to pin A0, so the Arduino program can use analogRead(0) to receive the light intensity. The servo also receives current from 5V and flows to ground, with pin 9 controlling its pulse pin.
 
@@ -69,3 +66,4 @@ Using the servo’s write function, the program can change the position of its a
 float pos = map(analogRead(0), 0, 1023, 0, 180);
 myservo.write(pos);
 ```
+![sketch 1 gif](/documentationAssets/sketch2.gif)
